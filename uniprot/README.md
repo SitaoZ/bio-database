@@ -14,3 +14,14 @@ db|UniqueIdentifier|EntryName ProteinName OS=OrganismName OX=OrganismIdentifier[
 - `GeneName` is the first gene name of the UniProtKB entry. If there is no gene name, OrderedLocusName or ORFname, the GN field is not listed.  
 - `ProteinExistence` is the numerical value describing the evidence for the existence of the protein.  
 - `SequenceVersion` is the version number of the sequence.  
+
+
+
+### evidence of protein 
+In UniProtKB there are 5 types of evidence for the existence of a protein: 
+
+- 1. Experimental evidence at protein level  
+- 2. Experimental evidence at transcript level  
+- 3. Protein inferred from homology  
+- 4. Protein predicted  
+- 5. Protein uncertain  
