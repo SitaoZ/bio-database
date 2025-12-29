@@ -94,38 +94,42 @@ Entrez 使用整数(integer)表示基因，ID唯一(PMID: 17148475)。现已经�
 
 ### 1.2.5 Refseq
 Reference Sequence (RefSeq) database [Refseq](https://pmc.ncbi.nlm.nih.gov/articles/PMC3965018/)
+[RefSeq Prefix](https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly)
 该项目1999年开始，收录人的3446条转录本和蛋白序列。现在，NCBI 的 RefSeq 项目提供病毒、微生物、细胞器和真核生物的基因组、转录本和蛋白质的序列记录。
 RefSeq FTP 第 61 版于 2013 年 9 月发布，包含来自 29,000 多种生物体的 4,100 多万条序列记录
-```bash
-一个主要来源是已知的 known RefSeqs
-RefSeq 由国际核苷酸序列数据库联盟成员维护的公共序列数据的自动和手动处理生成
 
-NM: mRNA Nucleotide sequence
+- Genomic
+```bash
+AC_ : Complete genomic molecule, usually alternate assembly
+NC_ : Complete genomic molecule, usually reference assembly
+NG_ : Incomplete genomic region
+NT_ : Contig or scaffold, clone-based or WGSa
+NW_ : Contig or scaffold, primarily WGSa
+NZ_ : Complete genomes and unfinished WGS data
+```
+
+- Transcript
+```
+NM_ : Protein-coding transcripts (usually curated)
 # 真核生物成熟mRNA的核苷酸序列， NM_表示序列来源是手动注释，（通常有实验数据的支持），XM_表示数据来源是计算模型预测（未经实验验证）
 
-NR
-# Non-coding RNA， NR_ 为手动审阅版本，XR_计算模型预测版本
+NR_ : Non-protein-coding transcripts
+# Non-coding RNA (lncRNA, rRNA etc) ， NR_ 为手动审阅版本，XR_计算模型预测版本
 
-
-NP
-# NP_手动审阅的NM_
-# XP_对应预测的XM_
-一个NM_序列通常对应一个NP_蛋白质序列（但通过选择性剪接，一个基因可能产生多个不同的mRNA和蛋白质异构体，因此会有多个NM/NP编号）。
-
-NG: Genomic sequence
-# 含义： 基因组区域（非当前染色体组装）的核苷酸序列。这是一个历史遗留的、较少使用的分类。
-# 通常用于表示尚未整合到最新染色体组装版本中的基因组片段、重叠群、或者来自特定基因组克隆（如BAC克隆）的序列。
-# 它代表一个基因组区域，可能包含基因、基因间区等，与代表特定转录本的NM_不同。
-# 现状： 在目前成熟的基因组组装中（如人类基因组GRCh38），基因组的参考序列通常以NC_（完整染色体分子）或NT_（未放置到染色体上的重叠群）来表示。NG_已逐渐被取代。
+XM_ : Predicted model protein-coding transcript
+XR_ : Predicted model non-protein-coding transcript
 
 ```
 
+- Protein
 ```bash
-另一个来源是 NCBI 的真核基因组注释流程，它提供了预测的模型 RefSeq 记录（带有 XM、XR 或 XP 接入前缀，以下称为“模型”RefSeq）。
-未知的，预测的，model RefSeqs
-XM
-XR
-XP
+AP_ : Annotated on AC_ alternate assembly
+NP_ : Associated with an NM_ or NC_ accession           # NP_手动审阅的NM_
+XP_ : Predicted model, associated with an XM_ accession # 预测的蛋白质, 对应预测的XM_
+YP_ : Annotated on genomic molecules without an instantiated transcript record
+WP_ : Non-redundant across multiple strains and species
+# 一个NM_序列通常对应一个NP_蛋白质序列（但通过选择性剪接，一个基因可能产生多个不同的mRNA和蛋白质异构体，因此会有多个NM/NP编号）。
+
 ```
 
 
