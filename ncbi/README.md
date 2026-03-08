@@ -18,3 +18,6 @@ usethis::edit_r_environ()  # 打开.Renviron文件
 # 添加一行：ENTREZ_KEY='你的实际API密钥'
 # 保存后重启R
 ```
+
+[refer1](https://mrcieu.r-universe.dev/rsnps/doc/manual.html#download_users)  
+[refer2](https://docs.ropensci.org/rsnps/reference/rsnps-package.html)
