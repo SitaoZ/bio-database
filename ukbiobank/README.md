@@ -162,3 +162,29 @@ Commands:
 ```bash
 dx pwd
 ```
+
+
+### 文件管理：查找数据
+
+```bash
+dx find data --name "file.txt"
+```
+
+```bash
+dx find data --property eid=123456
+```
+```bash
+dx find data --property field_id=123456
+```
+
+### 文件移动
+- dx cp：在不同项目之间拷贝数据
+```bash
+dx cp first_project_id/:file.txt second_project_id
+```
+
+- move 文件夹之间移动（同项目中）
+```bash
+dx mv test_folder/file.txt .
+dx mv ukb21008* LowTC/impute
+```
