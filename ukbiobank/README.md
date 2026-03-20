@@ -188,3 +188,12 @@ dx cp first_project_id/:file.txt second_project_id
 dx mv test_folder/file.txt .
 dx mv ukb21008* LowTC/impute
 ```
+
+
+### How to resolve REGENIE errors with GEL and TOPmed BGEN indices
+```bash
+# In the Command line input of swiss-army-knife, please provide the command as below:
+for i in $(ls *.bgen); do bgenix -index -g ${i}; done
+```
+然后给新的index文件指定输出目录，同时指定使用的计算资源实例为`mem3_ssd3_x4`， 这各计算实例会保证有足够的空间来存储新生成的`.bgen`文件。任务估计会耗时2小时，花费0.4英镑。
+[ukb官方解答](https://community.ukbiobank.ac.uk/hc/en-gb/community/posts/17179207789853-How-to-resolve-REGENIE-errors-with-GEL-and-TOPmed-BGEN-indices)
