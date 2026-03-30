@@ -164,6 +164,11 @@ dx pwd
 ```
 
 
+- dx run
+```bash
+dx run -h
+```
+
 ### 文件管理：查找数据
 
 ```bash
