@@ -177,6 +177,14 @@ dx find data --property eid=123456
 dx find data --property field_id=123456
 ```
 
+
+- 查找bgen数据
+```bash
+path_to_data = '/Bulk/Imputation/Imputation from genotype (GEL)/'
+dx find data --name '*.bgen' --path path_to_data --brief
+# 解码格式化输出
+bgens = [f'dx://{item.decode("utf-8")}' for item in subprocess.check_output(cmd).splitlines()]
+```
 ### 文件移动
 - dx cp：在不同项目之间拷贝数据
 ```bash
