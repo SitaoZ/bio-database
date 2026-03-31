@@ -226,10 +226,16 @@ Synonym                      hg19
 Assembly type                haploid with alt loci
 Submitter                    Genome Reference Consortium
 Date                         Feb 27, 2009
+
+
+wget https://ilmn-dragen-giab-samples.s3.amazonaws.com/FASTA/GRCh37.fa
 ```
 
 #### 1.6.5 hs37d5
 The human genome reference integrating `GRCh37` and the `decoy sequences` is termed **hs37d5**
+```bash
+wget https://ilmn-dragen-giab-samples.s3.amazonaws.com/FASTA/hs37d5.fa
+```
 
 #### 1.6.6 b37
 **Broad Institute** 以 GRCh37为基础创建的一个参考基因组. 该基因组被称为**b37**(Homo_sapiens_assembly19.fasta, MD5sum: 886ba1559393f75872c1cf459eb57f2d)
